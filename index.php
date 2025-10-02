@@ -28,12 +28,6 @@ $records = getAllApp();
                     <td><?= $app["name_app"]; ?></td>
                 </tr>
             <?php endforeach; ?>
-            <?php foreach ($records as $app) : ?>
-                <tr>
-                    <td><?= $app["id_app"]; ?></td>
-                    <td><?= $app["name_app"]; ?></td>
-                </tr>
-            <?php endforeach; ?>
         </tbody>
     </table>
 </body>

@@ -41,6 +41,7 @@ h1 {
 }
 
 table {
+    margin-top: 20vh;
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--border);
