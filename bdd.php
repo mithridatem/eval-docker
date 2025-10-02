@@ -2,11 +2,11 @@
 
 function connectBDD()
 {
-
+    include 'env.php';
     return new PDO(
-        'mysql:host=' . getenv('MYSQL_HOST') . ';dbname=' . getenv('MYSQL_DATABASE'),
-        getenv('MYSQL_USER'),
-        getenv('MYSQL_PASSWORD'),
+        'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DATABASE,
+        MYSQL_USER,
+        MYSQL_PASSWORD,
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
     );
 }

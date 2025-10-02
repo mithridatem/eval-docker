@@ -1,3 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary-bg: #f5f7fa;
+    --primary-color: #22223b;
+    --accent: #4f8cff;
+    --border: #e0e6ed;
+    --radius: 12px;
+    --shadow: 0 6px 24px 0 rgba(0,0,0,0.08);
+    --table-header-bg: #4f8cff;
+    --table-header-color: #fff;
+    --table-row-hover: #e3eefd;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--primary-bg);
+    color: var(--primary-color);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 36px;
+    font-size: 2.5rem;
+    color: var(--accent);
+    text-shadow: 0 2px 8px rgba(79,140,255,0.08);
+}
+
+table {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: #fff;
+    min-width: 380px;
+    margin-bottom: 32px;
+}
+
+th {
+    background: var(--table-header-bg);
+    color: var(--table-header-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    font-size: 1.08rem;
+}
+
+td, th {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 28px;
+    text-align: left;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: var(--table-row-hover);
+    transition: background 0.18s;
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    th, td {
+        padding: 14px 12px;
+        font-size: 1rem;
+    }
+    table {
+        min-width: unset;
+    }
+}
 :root {
     --vercel-black: #111;
     --vercel-gray: #fafafa;

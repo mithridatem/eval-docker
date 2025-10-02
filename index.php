@@ -1,7 +1,7 @@
 <?php
-//Récupération des données de la BDD
-include 'bdd.php';
+require_once './bdd.php';
 $records = getAllApp();
+
 ?>
 
 <html lang="en">
@@ -22,14 +22,18 @@ $records = getAllApp();
             </tr>
         </thead>
         <tbody>
-            <?php if (isset($records[0]["id_app"])) : ?>
-                <?php foreach ($records as $app) : ?>
-                    <tr>
-                        <td><?= $app["id_app"]; ?></td>
-                        <td><?= $app["name_app"]; ?></td>
-                    </tr>
-                <?php endforeach ?>
-            <?php endif ?>
+            <?php foreach ($records as $app) : ?>
+                <tr>
+                    <td><?= $app["id_app"]; ?></td>
+                    <td><?= $app["name_app"]; ?></td>
+                </tr>
+            <?php endforeach; ?>
+            <?php foreach ($records as $app) : ?>
+                <tr>
+                    <td><?= $app["id_app"]; ?></td>
+                    <td><?= $app["name_app"]; ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </body>
