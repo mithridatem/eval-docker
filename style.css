@@ -1,0 +1,61 @@
+:root {
+    --vercel-black: #111;
+    --vercel-gray: #fafafa;
+    --vercel-border: #eaeaea;
+    --vercel-blue: #0070f3;
+    --vercel-radius: 8px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--vercel-gray);
+    color: var(--vercel-black);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+}
+
+table {
+    border-radius: var(--vercel-radius);
+    overflow: hidden;
+    border: 1px solid var(--vercel-border);
+    box-shadow: 0 4px 14px 0 rgba(0,0,0,0.07);
+}
+
+th {
+    background: var(--vercel-blue);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+td, th {
+    border: none;
+    border-bottom: 1px solid var(--vercel-border);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: #eaeaea;
+    transition: background 0.2s;
+}
+td, th {
+    padding: 12px 24px;
+    text-align: left;
+}
